@@ -30,24 +30,24 @@ const UseCases: React.FC = () => {
   const isVisible = useOnScreen(sectionRef);
 
   return (
-    <section id="cas-usages" className="py-20 bg-brand-gray overflow-hidden">
-      <div className="container mx-auto px-6">
+    <section id="cas-usages" className="py-20 bg-brand-gray">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div 
           className="text-center mb-12"
         >
           <AnimatedTitle text="Prenez des Décisions Produit Plus Intelligentes" className="text-3xl md:text-4xl font-bold text-white font-mono" />
         </div>
-        <div ref={sectionRef} className="grid md:grid-cols-2 gap-8">
+        <div ref={sectionRef} className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {useCases.map((useCase, index) => (
             <div 
               key={index} 
-              className={`bg-brand-dark p-8 rounded-lg border border-brand-border flex flex-col motion-safe:transition-opacity motion-safe:duration-700 motion-safe:ease-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+              className={`bg-brand-dark p-8 rounded-lg border border-brand-border fade-in ${isVisible ? 'visible' : ''}`}
               style={{ transitionDelay: `${isVisible ? index * 150 + 200 : 0}ms` }}
             >
-              <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
-              <div className="space-y-3">
-                <p className="text-gray-400 line-through">{useCase.before}</p>
-                <p className="text-white font-medium bg-emerald-900/50 p-3 rounded-md border border-emerald-700">{useCase.after}</p>
+              <h3 className="text-xl font-semibold text-white mb-6">{useCase.title}</h3>
+              <div className="space-y-4">
+                <p className="text-brand-light-gray line-through">{useCase.before}</p>
+                <p className="text-white font-medium bg-emerald-900/50 border border-emerald-500/50 p-4 rounded-md">{useCase.after}</p>
               </div>
             </div>
           ))}

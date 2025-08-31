@@ -28,21 +28,21 @@ const Solution: React.FC = () => {
   const isVisible = useOnScreen(sectionRef);
 
   return (
-    <section id="solution" className="py-20 bg-brand-gray overflow-hidden">
-      <div className="container mx-auto px-6">
-        <div ref={sectionRef} className={`text-center mb-12`}>
+    <section id="solution" className="py-20 bg-brand-gray">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div ref={sectionRef} className="text-center mb-12">
           <AnimatedTitle text="Intégrez le réel dans votre cycle de dev." className="text-3xl md:text-4xl font-bold text-white font-mono" />
-          <p className="text-lg text-brand-light-gray mt-4 max-w-3xl mx-auto">
+          <p className="mt-4 text-lg text-brand-light-gray max-w-3xl mx-auto">
             Nous sommes une plateforme de Data-as-a-Service. Nous vous fournissons un pipeline de données fiable qui connecte vos outils de développement directement aux conversations de votre marché.
           </p>
         </div>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {solutions.map((solution, index) => (
             <div 
               key={index} 
-              className={`bg-brand-dark p-8 rounded-lg border border-brand-border motion-safe:transition-opacity motion-safe:duration-700 motion-safe:ease-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+              className={`bg-brand-dark p-8 rounded-lg border border-brand-border fade-in ${isVisible ? 'visible' : ''}`}
               style={{ transitionDelay: `${isVisible ? index * 150 + 200 : 0}ms` }}
-              >
+            >
               {solution.icon}
               <h3 className="text-xl font-semibold text-white mb-3">{solution.title}</h3>
               <p className="text-brand-light-gray">{solution.description}</p>

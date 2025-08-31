@@ -70,25 +70,24 @@ const Scheduling: React.FC = () => {
   const calendlyUrl = `https://calendly.com/VOTRE_LIEN/demo?name=${encodeURIComponent(formData.name)}&email=${encodeURIComponent(formData.email)}`;
 
   return (
-    <section id="planifier" className="py-20 bg-brand-dark overflow-hidden">
+    <section id="planifier" className="py-20 bg-brand-dark">
       <div 
         ref={sectionRef}
-        className={`container mx-auto px-6 text-center transition-opacity duration-700 ease-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+        className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in ${isVisible ? 'visible' : ''}`}
       >
         <AnimatedTitle text={status !== 'success' ? "Prêt à arrêter de coder à l'aveugle ?" : "Planifiez votre démo"} className="text-3xl md:text-4xl font-bold text-white font-mono" />
-        <p className="text-lg text-brand-light-gray mt-4 max-w-3xl mx-auto mb-12">
+        <p className="mt-4 text-lg text-brand-light-gray max-w-3xl mx-auto mb-12">
           {status !== 'success' 
             ? "Planifiez une démo de 45 minutes avec un ingénieur pour découvrir comment intégrer la voix de votre marché dans votre cycle de développement."
             : "Choisissez un créneau qui vous convient dans le calendrier ci-dessous. Vos informations ont été pré-remplies."
           }
         </p>
         
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-2xl mx-auto">
           {status !== 'success' ? (
-            <form onSubmit={handleSubmit} noValidate className="max-w-xl mx-auto">
-              <div className="space-y-6">
-                <div className="relative">
-                  <UserIcon className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-brand-light-gray" />
+            <form onSubmit={handleSubmit} noValidate className="space-y-6">
+              <div className="relative">
+                  <UserIcon className="w-5 h-5 text-brand-light-gray absolute left-4 top-1/2 -translate-y-1/2" />
                   <input
                     type="text"
                     name="name"
@@ -97,11 +96,11 @@ const Scheduling: React.FC = () => {
                     placeholder="Votre nom complet"
                     required
                     aria-label="Votre nom complet"
-                    className="w-full bg-brand-gray border border-brand-border rounded-md pl-12 pr-4 py-3 text-white placeholder-brand-light-gray focus:ring-2 focus:ring-brand-primary focus:border-brand-primary focus:outline-none transition-all duration-300"
+                    className="w-full bg-brand-gray border border-brand-border rounded-lg py-3 pr-4 pl-12 text-white placeholder-brand-light-gray focus:ring-2 focus:ring-brand-primary focus:border-brand-primary outline-none"
                   />
                 </div>
                 <div className="relative">
-                  <MailIcon className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-brand-light-gray" />
+                   <MailIcon className="w-5 h-5 text-brand-light-gray absolute left-4 top-1/2 -translate-y-1/2" />
                   <input
                     type="email"
                     name="email"
@@ -110,11 +109,11 @@ const Scheduling: React.FC = () => {
                     placeholder="Email professionnel"
                     required
                     aria-label="Email professionnel"
-                    className="w-full bg-brand-gray border border-brand-border rounded-md pl-12 pr-4 py-3 text-white placeholder-brand-light-gray focus:ring-2 focus:ring-brand-primary focus:border-brand-primary focus:outline-none transition-all duration-300"
+                    className="w-full bg-brand-gray border border-brand-border rounded-lg py-3 pr-4 pl-12 text-white placeholder-brand-light-gray focus:ring-2 focus:ring-brand-primary focus:border-brand-primary outline-none"
                   />
                 </div>
                 <div className="relative">
-                  <BuildingIcon className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-brand-light-gray" />
+                  <BuildingIcon className="w-5 h-5 text-brand-light-gray absolute left-4 top-1/2 -translate-y-1/2" />
                   <input
                     type="text"
                     name="company"
@@ -123,14 +122,13 @@ const Scheduling: React.FC = () => {
                     placeholder="Nom de l'entreprise"
                     required
                     aria-label="Nom de l'entreprise"
-                    className="w-full bg-brand-gray border border-brand-border rounded-md pl-12 pr-4 py-3 text-white placeholder-brand-light-gray focus:ring-2 focus:ring-brand-primary focus:border-brand-primary focus:outline-none transition-all duration-300"
+                    className="w-full bg-brand-gray border border-brand-border rounded-lg py-3 pr-4 pl-12 text-white placeholder-brand-light-gray focus:ring-2 focus:ring-brand-primary focus:border-brand-primary outline-none"
                   />
                 </div>
-              </div>
               <button
                 type="submit"
                 disabled={status === 'loading'}
-                className="w-full mt-8 bg-brand-primary text-black font-semibold px-8 py-3 rounded-md hover:bg-emerald-500 transition-all duration-300 transform motion-safe:hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:scale-100 flex items-center justify-center"
+                className="w-full bg-brand-primary text-black font-semibold py-3 px-6 rounded-lg text-lg hover:bg-emerald-300 transition-colors duration-300 flex items-center justify-center"
               >
                 {status === 'loading' ? (
                   <>
@@ -142,7 +140,7 @@ const Scheduling: React.FC = () => {
                 )}
               </button>
               {status === 'error' && error && (
-                <p className="mt-4 text-red-500">{error}</p>
+                <p className="mt-4 text-red-400">{error}</p>
               )}
             </form>
           ) : (
@@ -153,7 +151,7 @@ const Scheduling: React.FC = () => {
                 height="700"
                 frameBorder="0"
                 title="Planifier une démo via Calendly"
-                style={{ minHeight: '700px' }}
+                className="min-h-[700px]"
               ></iframe>
             </div>
           )}

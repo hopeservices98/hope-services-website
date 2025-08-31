@@ -38,31 +38,31 @@ const HowItWorks: React.FC = () => {
   const isVisible = useOnScreen(sectionRef);
 
   return (
-    <section id="comment-ca-marche" className="py-20 bg-brand-dark overflow-hidden">
-      <div className="container mx-auto px-6">
+    <section id="comment-ca-marche" className="py-20 bg-brand-dark">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div 
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <AnimatedTitle text="De la Donnée Brute à la Décision Claire" className="text-3xl md:text-4xl font-bold text-white font-mono" />
-          <p className="text-lg text-brand-light-gray mt-4 max-w-3xl mx-auto">
+          <p className="mt-4 text-lg text-brand-light-gray max-w-3xl mx-auto">
             Notre service est une machine qui transforme les conversations publiques en un signal clair pour vos équipes techniques. Voici comment.
           </p>
         </div>
-        <div ref={sectionRef} className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div ref={sectionRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step, index) => (
             <div 
               key={index} 
-              className={`bg-brand-gray p-8 rounded-lg border border-brand-border flex flex-col motion-safe:transition-opacity motion-safe:duration-700 motion-safe:ease-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+              className={`bg-brand-gray p-6 rounded-lg border border-brand-border flex flex-col fade-in ${isVisible ? 'visible' : ''}`}
               style={{ transitionDelay: `${isVisible ? index * 150 + 200 : 0}ms` }}
             >
               {step.icon}
               <p className="text-sm font-semibold text-brand-primary mb-2">{step.step}</p>
               <h3 className="text-xl font-semibold text-white mb-3">{step.title}</h3>
-              <p className="text-brand-light-gray">{step.description}</p>
+              <p className="text-brand-light-gray text-sm">{step.description}</p>
             </div>
           ))}
         </div>
-        <div className={`mt-16 text-center bg-brand-gray/50 border border-brand-border p-8 rounded-lg motion-safe:transition-opacity motion-safe:duration-700 motion-safe:ease-out ${isVisible ? 'opacity-100' : 'opacity-0'}`} style={{ transitionDelay: `${isVisible ? (steps.length * 150) + 200 : 0}ms` }}>
+        <div className={`mt-16 bg-brand-gray p-8 rounded-lg border border-brand-border text-center fade-in ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: `${isVisible ? (steps.length * 150) + 200 : 0}ms` }}>
             <h3 className="text-2xl font-bold text-white mb-3">Le Résultat ?</h3>
             <p className="text-lg text-brand-light-gray max-w-4xl mx-auto">
                 Vous n'achetez pas juste de la donnée. Vous obtenez des réponses structurées aux questions que vous vous posez chaque jour : "Sur quoi devons-nous travailler ensuite ?", "Quels sont les bugs les plus urgents ?", "Où nos concurrents sont-ils faibles ?". Le tout, livré en temps réel.

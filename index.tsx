@@ -1,3 +1,4 @@
+// FIX: Import React and ReactDOM since this file is an ES module and they cannot be used as globals.
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
@@ -7,7 +8,6 @@ if (!rootElement) {
   throw new Error("Could not find root element to mount to");
 }
 
-// FIX: 'ReactDOM' and 'React' were used as UMD globals. Imported them to work in a module context.
 const root = ReactDOM.createRoot(rootElement);
 root.render(
   <React.StrictMode>

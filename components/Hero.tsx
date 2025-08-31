@@ -28,26 +28,26 @@ const Hero: React.FC = () => {
   }
 
   return (
-    <section id="hero" ref={sectionRef} className="relative pt-32 pb-20 md:pt-48 md:pb-32 text-center overflow-hidden">
+    <section id="hero" ref={sectionRef} className="relative text-center overflow-hidden pt-40 pb-32">
        <MatrixBackground />
        <div className="absolute inset-0 bg-gradient-to-b from-brand-dark via-brand-dark/80 to-brand-dark"></div>
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="relative z-10 max-w-4xl mx-auto px-4">
         <AnimatedTitle 
           as="h1" 
           text="Votre Roadmap, Pilotée par l'API." 
-          className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4 font-mono"
+          className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 font-mono"
         />
-        <p className={`text-lg md:text-xl text-brand-light-gray max-w-3xl mx-auto mb-8 transition-opacity duration-1000 ease-out motion-safe:${isVisible ? 'opacity-100' : 'opacity-0'}`} style={{ transitionDelay: '1500ms' }}>
+        <p className={`text-lg md:text-xl text-brand-light-gray max-w-3xl mx-auto mb-10 fade-in ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '1500ms' }}>
           Cessez de développer sur des suppositions. Nous transformons les conversations publiques du web en un flux de données structurées pour alimenter votre backlog et accélérer vos décisions techniques.
         </p>
         <div 
-          className={`flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 transition-opacity duration-1000 ease-out motion-safe:${isVisible ? 'opacity-100' : 'opacity-0'}`}
+          className={`flex flex-col sm:flex-row items-center justify-center gap-4 fade-in ${isVisible ? 'visible' : ''}`}
           style={{ transitionDelay: '1800ms' }}
         >
-          <a href="#planifier" onClick={(e) => scrollTo(e, '#planifier')} className="w-full sm:w-auto bg-brand-primary text-white font-semibold px-8 py-3 rounded-md hover:bg-emerald-600 transition-all duration-300 transform motion-safe:hover:scale-105">
+          <a href="#planifier" onClick={(e) => scrollTo(e, '#planifier')} className="w-full sm:w-auto bg-brand-primary text-black font-semibold px-6 py-3 rounded-lg text-lg hover:bg-emerald-300 transition-colors duration-300">
             📞 Planifier une Démo Technique
           </a>
-          <a href="#comment-ca-marche" onClick={(e) => scrollTo(e, '#comment-ca-marche')} className="w-full sm:w-auto bg-brand-gray border border-brand-border text-white font-semibold px-8 py-3 rounded-md hover:bg-brand-border transition-all duration-300">
+          <a href="#comment-ca-marche" onClick={(e) => scrollTo(e, '#comment-ca-marche')} className="w-full sm:w-auto bg-brand-gray text-white font-semibold px-6 py-3 rounded-lg text-lg border border-brand-border hover:bg-brand-border transition-colors duration-300">
             🖲️ Découvrir notre Pipeline
           </a>
         </div>

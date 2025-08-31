@@ -31,19 +31,19 @@ const Testimonials: React.FC = () => {
   const isVisible = useOnScreen(sectionRef);
 
   return (
-    <section id="temoignages" className="py-20 bg-brand-dark overflow-hidden">
-      <div className="container mx-auto px-6">
+    <section id="temoignages" className="py-20 bg-brand-dark">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <AnimatedTitle text="Ils nous font confiance." className="text-3xl md:text-4xl font-bold text-white font-mono" />
-          <p className="text-lg text-brand-light-gray mt-4 max-w-3xl mx-auto">
+          <p className="mt-4 text-lg text-brand-light-gray max-w-3xl mx-auto">
             Des leaders techniques et produit utilisent nos données pour construire de meilleurs logiciels, plus rapidement.
           </p>
         </div>
-        <div ref={sectionRef} className="grid md:grid-cols-3 gap-8">
+        <div ref={sectionRef} className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
-              className={`bg-brand-gray p-8 rounded-lg border border-brand-border flex flex-col motion-safe:transition-opacity motion-safe:duration-700 motion-safe:ease-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+              className={`bg-brand-gray p-8 rounded-lg border border-brand-border flex flex-col fade-in ${isVisible ? 'visible' : ''}`}
               style={{ transitionDelay: `${isVisible ? index * 150 + 200 : 0}ms` }}
             >
               <p className="text-brand-light-gray mb-6 flex-grow">"{testimonial.quote}"</p>

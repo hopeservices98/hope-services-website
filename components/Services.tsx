@@ -65,38 +65,38 @@ const Services: React.FC = () => {
     }
 
   return (
-    <section id="services" className="py-20 bg-brand-dark overflow-hidden">
-      <div className="container mx-auto px-6">
+    <section id="services" className="py-20 bg-brand-dark">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div 
           className="text-center mb-12"
         >
           <AnimatedTitle text="Des Offres Conçues pour les Équipes Techniques" className="text-3xl md:text-4xl font-bold text-white font-mono" />
-          <p className="text-lg text-brand-light-gray mt-4 max-w-3xl mx-auto">
+          <p className="mt-4 text-lg text-brand-light-gray max-w-3xl mx-auto">
             Choisissez le plan qui s'adapte à la maturité de votre stack et de vos processus.
           </p>
         </div>
-        <div ref={sectionRef} className="grid lg:grid-cols-3 gap-8 items-stretch">
+        <div ref={sectionRef} className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
           {plans.map((plan, index) => (
             <div 
               key={index} 
-              className={`relative flex flex-col bg-brand-gray p-8 rounded-lg border motion-safe:transition-all motion-safe:duration-300 ${plan.popular ? 'border-brand-primary' : 'border-brand-border'} motion-safe:hover:border-brand-primary motion-safe:hover:-translate-y-2 motion-safe:hover:shadow-lg motion-safe:hover:shadow-brand-primary/10 motion-safe:transition-opacity motion-safe:duration-700 motion-safe:ease-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+              className={`bg-brand-gray rounded-lg border ${plan.popular ? 'border-brand-primary' : 'border-brand-border'} p-8 flex flex-col relative fade-in ${isVisible ? 'visible' : ''}`}
               style={{ transitionDelay: `${isVisible ? index * 150 + 200 : 0}ms` }}
             >
               {plan.popular && (
-                <div className="absolute top-0 right-8 -translate-y-1/2 bg-brand-primary text-black text-sm font-semibold px-4 py-1 rounded-full">
+                <div className="absolute top-0 -translate-y-1/2 right-8 bg-brand-primary text-black text-sm font-semibold px-4 py-1 rounded-full">
                   Le plus populaire
                 </div>
               )}
               <div className="flex-grow">
                 <h3 className="text-2xl font-semibold text-white mb-2">{plan.name}</h3>
-                <p className="text-brand-light-gray mb-6 h-12">{plan.description}</p>
-
-                <div className="mb-8 text-left">
-                    {plan.subtext && <p className="text-sm text-brand-light-gray">{plan.subtext}</p>}
-                    <p>
-                        <span className="text-4xl font-bold text-white">{plan.price}</span>
-                        {plan.period && <span className="text-brand-light-gray">{plan.period}</span>}
-                    </p>
+                <p className="text-brand-light-gray mb-6 min-h-[48px]">{plan.description}</p>
+                
+                <div className="mb-6 text-left">
+                  {plan.subtext && <p className="text-sm text-brand-light-gray">{plan.subtext}</p>}
+                  <p>
+                    <span className="text-5xl font-bold text-white">{plan.price}</span>
+                    {plan.period && <span className="text-brand-light-gray">{plan.period}</span>}
+                  </p>
                 </div>
                 
                 <ul className="space-y-4">
@@ -108,7 +108,7 @@ const Services: React.FC = () => {
                   ))}
                 </ul>
               </div>
-              <a href="#planifier" onClick={(e) => scrollTo(e, '#planifier')} className={`w-full text-center mt-8 block font-semibold px-6 py-3 rounded-md transition-all duration-300 ${plan.popular ? 'bg-brand-primary text-black hover:bg-emerald-500' : 'bg-brand-dark border border-brand-border text-white hover:bg-brand-border'} motion-safe:hover:scale-105`}>
+              <a href="#planifier" onClick={(e) => scrollTo(e, '#planifier')} className={`w-full text-center font-semibold py-3 rounded-lg mt-8 transition-colors ${plan.popular ? 'bg-brand-primary text-black hover:bg-emerald-300' : 'bg-brand-dark hover:bg-brand-border border border-brand-border'}`}>
                 {plan.cta}
               </a>
             </div>

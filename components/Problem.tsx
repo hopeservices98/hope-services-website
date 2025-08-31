@@ -28,20 +28,19 @@ const Problem: React.FC = () => {
   const isGridVisible = useOnScreen(gridRef);
   
   return (
-    <section id="probleme" className="py-20 bg-brand-dark overflow-hidden">
-      <div className="container mx-auto px-6">
+    <section id="probleme" className="py-20 bg-brand-dark">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <AnimatedTitle text="Coder dans le noir coûte cher." className="text-3xl md:text-4xl font-bold text-white font-mono" />
-            <p className="text-lg text-brand-light-gray mt-4 max-w-3xl mx-auto">
+            <p className="mt-4 text-lg text-brand-light-gray max-w-3xl mx-auto">
               Votre équipe technique est votre ressource la plus précieuse. Pourtant, chaque jour, des décisions critiques sont prises sur la base d'intuitions ou de retours utilisateurs fragmentés.
             </p>
           </div>
-        <div ref={gridRef} className="grid md:grid-cols-3 gap-8">
+        <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {problems.map((problem, index) => (
             <div 
               key={index} 
-              className={`bg-brand-gray p-8 rounded-lg border border-brand-border transition-all duration-300 motion-safe:hover:-translate-y-2 motion-safe:hover:border-brand-primary/50 motion-safe:hover:shadow-lg motion-safe:hover:shadow-brand-primary/10
-                         motion-safe:transition-opacity motion-safe:duration-700 motion-safe:ease-out ${isGridVisible ? 'opacity-100' : 'opacity-0'}`}
+              className={`bg-brand-gray p-8 rounded-lg border border-brand-border fade-in ${isGridVisible ? 'visible' : ''}`}
               style={{ transitionDelay: `${isGridVisible ? index * 150 : 0}ms` }}
             >
               {problem.icon}

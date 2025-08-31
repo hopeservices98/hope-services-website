@@ -19,11 +19,11 @@ export const CodeBlock: React.FC<CodeBlockProps> = ({ language, title, children 
 
   return (
     <div className="bg-brand-dark border border-brand-border rounded-lg overflow-hidden">
-      <div className="flex justify-between items-center px-4 py-2 bg-brand-gray/50 border-b border-brand-border">
+      <div className="flex justify-between items-center px-4 py-2 bg-brand-gray border-b border-brand-border">
         <p className="text-sm text-brand-light-gray font-semibold">{title}</p>
         <button 
           onClick={handleCopy} 
-          className="flex items-center space-x-1 text-xs text-brand-light-gray hover:text-white transition-colors"
+          className="flex items-center gap-1.5 text-sm text-brand-light-gray hover:text-white transition-colors"
           aria-label="Copier le code"
         >
           {copied ? (
