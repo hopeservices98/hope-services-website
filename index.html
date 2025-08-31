@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOPE-SERVICES | Data-as-a-Service pour le Développement Produit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-primary': '#34d399', // tailwind emerald-400
+              'brand-dark': '#111827', // tailwind gray-900
+              'brand-gray': '#1f2937', // tailwind gray-800
+              'brand-light-gray': '#9ca3af', // tailwind gray-400
+              'brand-border': '#374151', // tailwind gray-700
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", 'monospace'],
+            },
+            animation: {
+              'grid-pan': 'grid-pan 60s linear infinite',
+            },
+            keyframes: {
+              'grid-pan': {
+                '0%': { backgroundPosition: '0% 0%' },
+                '100%': { backgroundPosition: '100% 100%' },
+              },
+            }
+          },
+        },
+        variants: {
+            extend: {
+                transform: ['motion-safe'],
+                transitionProperty: ['motion-safe'],
+                animation: ['motion-safe'],
+            },
+        },
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
