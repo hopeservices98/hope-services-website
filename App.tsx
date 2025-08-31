@@ -6,6 +6,7 @@ import Solution from './components/Solution.tsx';
 import HowItWorks from './components/HowItWorks.tsx';
 import Stack from './components/Stack.tsx';
 import UseCases from './components/UseCases.tsx';
+import Testimonials from './components/Testimonials.tsx';
 import Services from './components/Services.tsx';
 import RevolutionaryServices from './components/RevolutionaryServices.tsx';
 import Documentation from './components/Documentation.tsx';
@@ -23,6 +24,7 @@ const App: React.FC = () => {
         <HowItWorks />
         <Stack />
         <UseCases />
+        <Testimonials />
         <Services />
         <RevolutionaryServices />
         <Documentation />
