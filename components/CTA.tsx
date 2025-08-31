@@ -140,7 +140,7 @@ const Scheduling: React.FC = () => {
                 )}
               </button>
               {status === 'error' && error && (
-                <p className="mt-4 text-red-400">{error}</p>
+                <p role="alert" aria-live="assertive" className="mt-4 text-red-400">{error}</p>
               )}
             </form>
           ) : (

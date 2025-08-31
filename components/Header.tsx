@@ -60,7 +60,12 @@ const Header: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu">
+            <button 
+              onClick={() => setIsMenuOpen(!isMenuOpen)} 
+              aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-menu"
+            >
               {isMenuOpen ? <XIcon className="w-7 h-7 text-white" /> : <MenuIcon className="w-7 h-7 text-white" />}
             </button>
           </div>
@@ -68,7 +73,10 @@ const Header: React.FC = () => {
       </div>
       
       {/* Mobile Menu */}
-      <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} bg-brand-gray border-t border-brand-border`}>
+      <div 
+        id="mobile-menu"
+        className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} bg-brand-gray border-t border-brand-border`}
+      >
         <nav className="px-2 pt-2 pb-4 space-y-1 sm:px-3">
             {navLinks.map(link => (
               <a 
