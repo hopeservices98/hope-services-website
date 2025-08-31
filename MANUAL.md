@@ -1,5 +1,20 @@
 # Manuel d'Utilisation et de Déploiement - HOPE-SERVICES
 
+## Partie 0 : Comprendre la Structure du Projet (Très Important)
+
+Ce projet est configuré pour fonctionner directement dans le navigateur sans étape de "compilation" (sans outils comme Vite ou Webpack). Cette simplicité a une conséquence majeure sur la manière dont vous devez le modifier.
+
+**Le Principe Clé : Tout le code de l'application se trouve dans `index.tsx`**
+
+-   **Un Seul Fichier Actif** : Le seul fichier que votre navigateur exécute est `index.tsx`. C'est là que tous les composants (Header, Hero, etc.) et la logique de l'application sont définis.
+-   **Les Autres Fichiers sont Inactifs** : Les dossiers comme `components/`, `hooks/` et le fichier `App.tsx` sont présents pour vous aider à voir le code de manière organisée, mais **ils ne sont pas utilisés par le site en ligne**. Le navigateur ne peut pas lire les `import` entre ces fichiers dans cette configuration.
+
+**Conclusion : Pour toute modification, vous devez éditer `index.tsx` directement.**
+
+Si vous modifiez un fichier dans `components/`, **vous ne verrez aucun changement sur le site**. Vous devez reporter cette modification sur la définition du composant correspondant à l'intérieur de `index.tsx`.
+
+---
+
 ## Partie 1 : Manuel d'Utilisation
 
 ### 1.1. Objectif du Site
@@ -26,8 +41,9 @@ L'élément le plus important à configurer pour que le site soit fonctionnel es
     *   **Durée** : 45 minutes
 4.  **Copiez le lien** : Une fois l'événement créé, Calendly vous donnera un lien public. Il ressemblera à `https://calendly.com/votre-nom/demo-technique`.
 5.  **Mettez à jour le code** :
-    *   Ouvrez le fichier : `components/CTA.tsx`.
-    *   Trouvez la ligne (vers la ligne 107) :
+    *   Ouvrez le fichier : `index.tsx` (rappelez-vous, c'est le seul fichier actif).
+    *   Trouvez la définition du composant `Scheduling`.
+    *   Localisez la ligne :
         ```javascript
         const calendlyUrl = `https://calendly.com/VOTRE_LIEN/demo?name=${encodeURIComponent(formData.name)}&email=${encodeURIComponent(formData.email)}`;
         ```
@@ -37,11 +53,11 @@ Le site est maintenant prêt à prendre des rendez-vous pour vous !
 
 ### 1.3. Personnalisation du Contenu
 
-Tout le contenu textuel (titres, descriptions, fonctionnalités) se trouve directement dans les fichiers des composants (`.tsx`). Si vous souhaitez modifier un texte, il vous suffit d'ouvrir le fichier correspondant et de changer le texte.
+Tout le contenu textuel (titres, descriptions, fonctionnalités) se trouve directement dans les définitions des composants à l'intérieur du fichier `index.tsx`. Si vous souhaitez modifier un texte, il vous suffit de trouver le composant correspondant dans `index.tsx` et de changer le texte.
 
-- **Titre principal** : `components/Hero.tsx`
-- **Plans et tarifs** : `components/Services.tsx`
-- **Problèmes et solutions** : `components/Problem.tsx` et `components/Solution.tsx`
+- **Titre principal** : Dans le composant `Hero`.
+- **Plans et tarifs** : Dans le composant `Services`.
+- **Problèmes et solutions** : Dans les composants `Problem` et `Solution`.
 - **Et ainsi de suite pour chaque section.**
 
 ---
