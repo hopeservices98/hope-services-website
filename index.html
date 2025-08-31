@@ -4,6 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HOPE-SERVICES | Data-as-a-Service pour le Développement Produit</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Cessez de développer sur des suppositions. HOPE-SERVICES transforme les conversations publiques en un flux de données structurées pour alimenter votre backlog et accélérer vos décisions techniques." />
+    <meta name="keywords" content="Data-as-a-Service, développement produit, API, roadmap, insights, feedback utilisateur, analyse concurrentielle, SaaS, B2B, tech" />
+    <meta name="author" content="HOPE-SERVICES" />
+    <!-- NOTE: Mettez à jour les URLs ci-dessous avec votre nom de domaine final et créez une image de prévisualisation (og-image.png, 1200x630px). -->
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.hope-services.com/" />
+    <meta property="og:title" content="HOPE-SERVICES | Data-as-a-Service pour le Développement Produit" />
+    <meta property="og:description" content="Transformez les conversations publiques en un flux de données structurées pour alimenter votre backlog et accélérer vos décisions techniques." />
+    <meta property="og:image" content="https://www.hope-services.com/og-image.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.hope-services.com/" />
+    <meta property="twitter:title" content="HOPE-SERVICES | Data-as-a-Service pour le Développement Produit" />
+    <meta property="twitter:description" content="Transformez les conversations publiques en un flux de données structurées pour alimenter votre backlog et accélérer vos décisions techniques." />
+    <meta property="twitter:image" content="https://www.hope-services.com/og-image.png" />
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -43,14 +63,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <!-- Babel Standalone for in-browser JSX/TSX transpilation -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <script type="importmap">
+    
+    <!-- React and ReactDOM UMD builds (makes them globally available) -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<script type="importmap">
 {
   "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
-    "react/": "https://aistudiocdn.com/react@^19.1.1/",
-    "react": "https://aistudiocdn.com/react@^19.1.1"
+    "react/": "https://aistudiocdn.com/react@^19.1.1/"
   }
 }
 </script>
@@ -58,8 +83,8 @@
 </head>
   <body>
     <div id="root"></div>
-    <!-- Added data-presets to enable both React and TypeScript transpilation -->
-    <script type="text/babel" data-type="module" data-presets="react,typescript" src="/index.tsx"></script>
+    <!-- Main application script, Babel will transpile it. No module type needed. -->
+    <script type="text/babel" data-presets="react,typescript" src="/index.tsx"></script>
   <script type="module" src="/index.tsx"></script>
 </body>
 </html>
