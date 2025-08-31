@@ -1,5 +1,5 @@
 import React from 'react';
-import { CodeIcon } from './icons/CodeIcon';
+import { CodeIcon } from './icons/CodeIcon.tsx';
 
 const Footer: React.FC = () => {
   return (

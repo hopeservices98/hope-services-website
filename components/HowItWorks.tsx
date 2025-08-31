@@ -1,10 +1,10 @@
 import React, { useRef } from 'react';
-import { useOnScreen } from '../hooks/useOnScreen';
-import { AnimatedTitle } from './AnimatedTitle';
-import { ListeningIcon } from './icons/ListeningIcon';
-import { UnderstandingIcon } from './icons/UnderstandingIcon';
-import { OrganizingIcon } from './icons/OrganizingIcon';
-import { DeliveringIcon } from './icons/DeliveringIcon';
+import { useOnScreen } from '../hooks/useOnScreen.ts';
+import { AnimatedTitle } from './AnimatedTitle.tsx';
+import { ListeningIcon } from './icons/ListeningIcon.tsx';
+import { UnderstandingIcon } from './icons/UnderstandingIcon.tsx';
+import { OrganizingIcon } from './icons/OrganizingIcon.tsx';
+import { DeliveringIcon } from './icons/DeliveringIcon.tsx';
 
 const steps = [
   {

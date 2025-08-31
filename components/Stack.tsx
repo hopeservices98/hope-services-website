@@ -1,10 +1,10 @@
 import React, { useRef } from 'react';
-import { useOnScreen } from '../hooks/useOnScreen';
-import { DatabaseIcon } from './icons/DatabaseIcon';
-import { CloudIcon } from './icons/CloudIcon';
-import { CogIcon } from './icons/CogIcon';
-import { ApiIcon } from './icons/ApiIcon';
-import { AnimatedTitle } from './AnimatedTitle';
+import { useOnScreen } from '../hooks/useOnScreen.ts';
+import { DatabaseIcon } from './icons/DatabaseIcon.tsx';
+import { CloudIcon } from './icons/CloudIcon.tsx';
+import { CogIcon } from './icons/CogIcon.tsx';
+import { ApiIcon } from './icons/ApiIcon.tsx';
+import { AnimatedTitle } from './AnimatedTitle.tsx';
 
 const stackItems = [
     {

@@ -1,6 +1,6 @@
 import React from 'react';
-import { AnimatedTitle } from './AnimatedTitle';
-import { CodeBlock } from './CodeBlock';
+import { AnimatedTitle } from './AnimatedTitle.tsx';
+import { CodeBlock } from './CodeBlock.tsx';
 
 const curlExample = `curl "https://api.hope-services.com/v1/insights?type=bug" \\
   -H "Authorization: Bearer VOTRE_CLE_API"`;

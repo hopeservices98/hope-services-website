@@ -1,7 +1,7 @@
 import React, { useState, useRef, FormEvent } from 'react';
-import { useOnScreen } from '../hooks/useOnScreen';
-import { AnimatedTitle } from './AnimatedTitle';
-import { SpinnerIcon } from './icons/SpinnerIcon';
+import { useOnScreen } from '../hooks/useOnScreen.ts';
+import { AnimatedTitle } from './AnimatedTitle.tsx';
+import { SpinnerIcon } from './icons/SpinnerIcon.tsx';
 
 // --- Local Icon Components ---
 const UserIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (

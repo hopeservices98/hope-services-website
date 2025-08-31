@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { CodeIcon } from './icons/CodeIcon';
-import { MenuIcon } from './icons/MenuIcon';
-import { XIcon } from './icons/XIcon';
+import { CodeIcon } from './icons/CodeIcon.tsx';
+import { MenuIcon } from './icons/MenuIcon.tsx';
+import { XIcon } from './icons/XIcon.tsx';
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);

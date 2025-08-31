@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
-import { CheckIcon } from './icons/CheckIcon';
-import { useOnScreen } from '../hooks/useOnScreen';
-import { AnimatedTitle } from './AnimatedTitle';
+import { CheckIcon } from './icons/CheckIcon.tsx';
+import { useOnScreen } from '../hooks/useOnScreen.ts';
+import { AnimatedTitle } from './AnimatedTitle.tsx';
 
 const plans = [
   {

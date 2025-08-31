@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
-import { useOnScreen } from '../hooks/useOnScreen';
-import { AnimatedTitle } from './AnimatedTitle';
+import { useOnScreen } from '../hooks/useOnScreen.ts';
+import { AnimatedTitle } from './AnimatedTitle.tsx';
 
 const services = [
   {

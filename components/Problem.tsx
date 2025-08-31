@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
-import { HypothesisIcon } from './icons/HypothesisIcon';
-import { NoiseIcon } from './icons/NoiseIcon';
-import { MagnifyIcon } from './icons/MagnifyIcon';
-import { useOnScreen } from '../hooks/useOnScreen';
-import { AnimatedTitle } from './AnimatedTitle';
+import { HypothesisIcon } from './icons/HypothesisIcon.tsx';
+import { NoiseIcon } from './icons/NoiseIcon.tsx';
+import { MagnifyIcon } from './icons/MagnifyIcon.tsx';
+import { useOnScreen } from '../hooks/useOnScreen.ts';
+import { AnimatedTitle } from './AnimatedTitle.tsx';
 
 const problems = [
   {

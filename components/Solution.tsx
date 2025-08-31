@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
-import { InsightIcon } from './icons/InsightIcon';
-import { IntegrationIcon } from './icons/IntegrationIcon';
-import { ApiIcon } from './icons/ApiIcon';
-import { useOnScreen } from '../hooks/useOnScreen';
-import { AnimatedTitle } from './AnimatedTitle';
+import { InsightIcon } from './icons/InsightIcon.tsx';
+import { IntegrationIcon } from './icons/IntegrationIcon.tsx';
+import { ApiIcon } from './icons/ApiIcon.tsx';
+import { useOnScreen } from '../hooks/useOnScreen.ts';
+import { AnimatedTitle } from './AnimatedTitle.tsx';
 
 const solutions = [
   {

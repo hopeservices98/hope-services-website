@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
-import { useOnScreen } from '../hooks/useOnScreen';
-import { useMatrixText } from '../hooks/useMatrixText';
+import { useOnScreen } from '../hooks/useOnScreen.ts';
+import { useMatrixText } from '../hooks/useMatrixText.ts';
 
 interface AnimatedTitleProps {
   text: string;

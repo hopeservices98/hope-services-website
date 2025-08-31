@@ -20,7 +20,7 @@ L'élément le plus important à configurer pour que le site soit fonctionnel es
 **Comment configurer votre lien Calendly (en 5 minutes) :**
 
 1.  **Créez un compte** : Allez sur [Calendly.com](https://calendly.com) et inscrivez-vous (le compte gratuit est suffisant pour commencer).
-2.  **Connectez votre agenda** : Dans les paramètres de Calendly, connectez votre agenda principal (Google Calendar, Office 365, etc.). C'est ce qui permettra à Calendly de connaître vos disponibilités.
+2.  **Connectez votre agenda** : Dans les paramètres de Calendly, connectez votre agenda principal (Google Calendar, Office 356, etc.). C'est ce qui permettra à Calendly de connaître vos disponibilités.
 3.  **Créez un type d'événement** : Créez un nouvel événement. Par exemple :
     *   **Nom** : "Démo Technique - HOPE-SERVICES"
     *   **Durée** : 45 minutes
@@ -46,51 +46,46 @@ Tout le contenu textuel (titres, descriptions, fonctionnalités) se trouve direc
 
 ---
 
-## Partie 2 : Guide de Déploiement
+## Partie 2 : Guides de Déploiement
 
-### 2.1. Prérequis
+### 2.1. Prérequis Commun
 
-- **Code source** : L'ensemble des fichiers et dossiers du projet.
-- **Compte GitHub** (ou GitLab/Bitbucket) : La méthode recommandée est de stocker votre code sur une plateforme Git.
-- **Compte sur une plateforme d'hébergement** : Nous recommandons **Vercel** ou **Netlify** pour leur simplicité et leur généreux plan gratuit, parfaitement adaptés à ce type de projet.
+- **Code source** : L'ensemble des fichiers et dossiers du projet sur un dépôt Git (GitHub, GitLab, etc.).
+- **Compte sur la plateforme d'hébergement** de votre choix (Vercel, Netlify, Render...).
 
-### 2.2. Méthode Recommandée : Déploiement Continu via Git
+### 2.2. Déploiement sur Vercel ou Netlify
 
-Cette méthode déploiera automatiquement votre site à chaque fois que vous mettrez à jour votre code sur GitHub.
+La méthode recommandée est le déploiement continu via Git.
 
-**Étape 1 : Pousser le code sur GitHub**
+**Étape 1 : Pousser le code sur GitHub** (si ce n'est pas déjà fait)
 
-1.  Créez un nouveau dépôt (repository) sur votre compte GitHub.
-2.  Suivez les instructions de GitHub pour "push an existing repository from the command line" afin d'envoyer le code du site dans ce nouveau dépôt.
+**Étape 2 : Déployer**
 
-**Étape 2 : Déployer avec Vercel (Exemple)**
+1.  **Inscrivez-vous** sur Vercel ou Netlify en utilisant votre compte GitHub.
+2.  **Créez un nouveau projet** et importez le dépôt Git de HOPE-SERVICES.
+3.  **Configurez le projet** :
+    *   **Framework Preset** : `Other`.
+    *   **Build Command** : Laissez ce champ **vide**.
+    *   **Output Directory** : Laissez la configuration par défaut.
+4.  **Déployez**. La plateforme vous fournira une URL publique.
 
-1.  **Inscrivez-vous sur Vercel** : Allez sur [Vercel.com](https://vercel.com) et créez un compte en utilisant votre compte GitHub.
-2.  **Créez un nouveau projet** : Sur votre tableau de bord Vercel, cliquez sur "Add New..." -> "Project".
-3.  **Importez votre dépôt** : Vercel affichera vos dépôts GitHub. Sélectionnez celui que vous venez de créer pour le site HOPE-SERVICES et cliquez sur "Import".
-4.  **Configurez le projet** :
-    *   Vercel est très intelligent. Comme il ne détectera pas un framework standard avec un `package.json` à la racine, il pourrait vous demander de configurer le projet.
-    *   **Framework Preset** : Sélectionnez `Other`.
-    *   **Build Command** : Laissez ce champ **vide**. Ce projet n'a pas besoin d'étape de "build" (compilation).
-    *   **Output Directory** : Laissez la configuration par défaut. Le `index.html` est à la racine.
-5.  **Déployez** : Cliquez sur le bouton "Deploy".
-6.  **C'est terminé !** Vercel va construire et déployer votre site. En moins d'une minute, vous obtiendrez une URL publique (ex: `hope-services.vercel.app`) où votre site sera en ligne.
+Pour un déploiement manuel rapide, vous pouvez utiliser **Netlify Drop** ([https://app.netlify.com/drop](https://app.netlify.com/drop)) et y glisser-déposer le dossier de votre projet.
 
-Le processus est quasiment identique sur **Netlify**.
+### 2.3. Déploiement sur Render
 
-### 2.3. Méthode Alternative : Déploiement Manuel (Drag & Drop)
+Render est également une excellente option pour les sites statiques.
 
-Si vous souhaitez simplement mettre le site en ligne une seule fois sans le lier à Git.
-
-1.  **Allez sur Netlify Drop** : [https://app.netlify.com/drop](https://app.netlify.com/drop)
-2.  **Glissez-déposez le dossier** : Prenez le dossier contenant tous les fichiers de votre projet (`index.html`, `App.tsx`, le dossier `components`, etc.) et glissez-le directement dans la zone indiquée sur la page Netlify.
-3.  **Attendez** : Netlify va télécharger et déployer vos fichiers. En quelques secondes, vous aurez une URL publique pour votre site.
+1.  **Créez un service** : Sur votre tableau de bord Render, cliquez sur **"New +"** -> **"Static Site"**.
+2.  **Connectez votre dépôt** Git contenant le code du projet.
+3.  **Configurez le service** : C'est l'étape la plus importante.
+    *   **Name** : `hope-services` (ou le nom de votre choix).
+    *   **Root Directory** : Laissez ce champ **vide**.
+    *   **Build Command** : Laissez ce champ **vide** (car il n'y a pas d'étape de compilation).
+    *   **Publish Directory** : Mettez `.` (un simple point), pour indiquer que le contenu à servir est à la racine.
+4.  **Cliquez sur "Create Static Site"**. Le déploiement démarre et votre site sera en ligne en moins d'une minute.
 
 ### 2.4. Après le Déploiement : Nom de Domaine Personnalisé
 
-Une fois votre site en ligne, la dernière étape est de le lier à votre nom de domaine professionnel (ex: `www.hope-services.com`).
-
-- Sur Vercel ou Netlify, allez dans les paramètres de votre projet (`Settings` -> `Domains`).
-- Suivez les instructions pour ajouter votre nom de domaine. Cela implique généralement d'aller chez votre fournisseur de nom de domaine (OVH, GoDaddy, Gandi, etc.) et d'ajouter ou de modifier des enregistrements DNS (généralement un enregistrement `A` ou `CNAME`).
+Quelle que soit la plateforme, vous pouvez lier votre nom de domaine personnalisé (ex: `www.hope-services.com`) dans les paramètres de votre projet (`Settings` -> `Domains`). Suivez les instructions pour mettre à jour vos enregistrements DNS chez votre fournisseur de domaine.
 
 Votre site est maintenant finalisé, configuré et en ligne, prêt à attirer vos premiers clients.

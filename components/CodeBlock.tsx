@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { ClipboardIcon } from './icons/ClipboardIcon';
-import { CheckIcon } from './icons/CheckIcon';
+import { ClipboardIcon } from './icons/ClipboardIcon.tsx';
+import { CheckIcon } from './icons/CheckIcon.tsx';
 
 interface CodeBlockProps {
   language: string;

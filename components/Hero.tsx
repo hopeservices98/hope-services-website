@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
-import MatrixBackground from './MatrixBackground';
-import { useOnScreen } from '../hooks/useOnScreen';
-import { useMatrixText } from '../hooks/useMatrixText';
+import MatrixBackground from './MatrixBackground.tsx';
+import { useOnScreen } from '../hooks/useOnScreen.ts';
+import { useMatrixText } from '../hooks/useMatrixText.ts';
 
 const AnimatedTitle: React.FC<{ text: string; as?: 'h1' | 'h2'; className?: string; }> = ({ text, as = 'h1', className }) => {
   const ref = useRef<HTMLHeadingElement>(null);

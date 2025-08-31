@@ -1,16 +1,16 @@
 import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Problem from './components/Problem';
-import Solution from './components/Solution';
-import HowItWorks from './components/HowItWorks';
-import Stack from './components/Stack';
-import UseCases from './components/UseCases';
-import Services from './components/Services';
-import RevolutionaryServices from './components/RevolutionaryServices';
-import Documentation from './components/Documentation';
-import Scheduling from './components/CTA';
-import Footer from './components/Footer';
+import Header from './components/Header.tsx';
+import Hero from './components/Hero.tsx';
+import Problem from './components/Problem.tsx';
+import Solution from './components/Solution.tsx';
+import HowItWorks from './components/HowItWorks.tsx';
+import Stack from './components/Stack.tsx';
+import UseCases from './components/UseCases.tsx';
+import Services from './components/Services.tsx';
+import RevolutionaryServices from './components/RevolutionaryServices.tsx';
+import Documentation from './components/Documentation.tsx';
+import Scheduling from './components/CTA.tsx';
+import Footer from './components/Footer.tsx';
 
 const App: React.FC = () => {
   return (
