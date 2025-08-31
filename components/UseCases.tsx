@@ -4,24 +4,24 @@ import { AnimatedTitle } from './AnimatedTitle.tsx';
 
 const useCases = [
   {
-    title: "Priorisez votre Backlog avec des Données",
+    title: "Priorisez vos Projets avec des Données",
     before: `Avant : "Je pense qu'on devrait faire ça."`,
-    after: `Après : "La fonctionnalité X a été demandée 152 fois ce trimestre. Le ticket est prioritaire."`,
+    after: `Après : "Le service X a été demandé 152 fois ce trimestre. Le projet est prioritaire."`,
   },
   {
-    title: "Détectez les Bugs Avant Tout le Monde",
-    before: "Avant : Attendre que les utilisateurs créent des tickets de support.",
-    after: `Après : Alerte Slack : "Pic de mentions négatives sur le login (Android 14) détecté."`,
+    title: "Détectez les Problèmes Avant Tout le Monde",
+    before: "Avant : Attendre que les clients mécontents contactent le support.",
+    after: `Après : Alerte Slack : "Pic de mentions négatives sur notre service de livraison détecté."`,
   },
   {
     title: "Exploitez les Faiblesses des Concurrents",
     before: "Avant : Lire leurs communiqués de presse.",
-    after: `Après : "L'API du concurrent Y est 'lente' et 'mal documentée'. C'est notre point d'attaque."`,
+    after: `Après : "Le service client du concurrent Y est 'lent' et 'peu réactif'. C'est notre point d'attaque."`,
   },
   {
-    title: "Validez votre Roadmap à Moindre Coût",
-    before: "Avant : Lancer une feature et espérer qu'elle soit utilisée.",
-    after: "Après : Confirmer la demande organique avant d'écrire la première ligne de code.",
+    title: "Validez votre Stratégie à Moindre Coût",
+    before: "Avant : Lancer un service et espérer qu'il soit utilisé.",
+    after: "Après : Confirmer la demande du marché avant d'investir le premier euro.",
   },
 ];
 
@@ -35,7 +35,7 @@ const UseCases: React.FC = () => {
         <div 
           className="text-center mb-12"
         >
-          <AnimatedTitle text="Prenez des Décisions Produit Plus Intelligentes" className="text-3xl md:text-4xl font-bold text-white font-mono" />
+          <AnimatedTitle text="Prenez des Décisions Stratégiques Plus Intelligentes" className="text-3xl md:text-4xl font-bold text-white font-mono" />
         </div>
         <div ref={sectionRef} className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {useCases.map((useCase, index) => (

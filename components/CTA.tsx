@@ -75,10 +75,10 @@ const Scheduling: React.FC = () => {
         ref={sectionRef}
         className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in ${isVisible ? 'visible' : ''}`}
       >
-        <AnimatedTitle text={status !== 'success' ? "Prêt à arrêter de coder à l'aveugle ?" : "Planifiez votre démo"} className="text-3xl md:text-4xl font-bold text-white font-mono" />
+        <AnimatedTitle text={status !== 'success' ? "Prêt à piloter par la donnée ?" : "Planifiez votre démo"} className="text-3xl md:text-4xl font-bold text-white font-mono" />
         <p className="mt-4 text-lg text-brand-light-gray max-w-3xl mx-auto mb-12">
           {status !== 'success' 
-            ? "Planifiez une démo de 45 minutes avec un ingénieur pour découvrir comment intégrer la voix de votre marché dans votre cycle de développement."
+            ? "Planifiez une démo de 30 minutes avec un expert pour découvrir comment intégrer la voix de votre marché au coeur de votre stratégie."
             : "Choisissez un créneau qui vous convient dans le calendrier ci-dessous. Vos informations ont été pré-remplies."
           }
         </p>

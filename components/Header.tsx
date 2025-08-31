@@ -18,8 +18,8 @@ const Header: React.FC = () => {
   const navLinks = [
     { href: '#probleme', label: 'Le Problème' },
     { href: '#solution', label: 'Solution' },
-    { href: '#stack', label: 'Stack Technique' },
-    { href: '#documentation', label: 'Documentation' },
+    { href: '#processus', label: 'Processus' },
+    { href: '#documentation', label: 'Données' },
     { href: '#services', label: 'Services' },
   ];
   

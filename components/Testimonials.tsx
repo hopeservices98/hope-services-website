@@ -10,19 +10,19 @@ const UserCircleIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 
 const testimonials = [
   {
-    quote: "L'API de HOPE-SERVICES nous a permis de diviser par trois le temps de qualification des features. On ne navigue plus à l'aveugle, on code ce que les utilisateurs attendent VRAIMENT.",
+    quote: "Les données de HOPE-SERVICES nous ont permis de diviser par trois le temps de planification stratégique. On ne navigue plus à l'aveugle, on offre ce que les clients attendent VRAIMENT.",
     name: "Julien Lemoine",
-    title: "CTO @ ScaleUp SaaS",
+    title: "Directeur Stratégie @ Grand Groupe",
   },
   {
-    quote: "Le 'Backlog-as-a-Service' est une révolution. Mon équipe reçoit des tickets Jira clairs, sourcés et pré-qualifiés. C'est un gain de productivité énorme pour nos Product Managers.",
+    quote: "Les 'Rapports Stratégiques-as-a-Service' sont une révolution. Mon équipe reçoit des analyses claires, sourcées et quantifiées. C'est un gain de productivité énorme pour nos analystes.",
     name: "Claire Dubois",
-    title: "Head of Product @ Fintech Innovante",
+    title: "Directrice Marketing @ PME en Croissance",
   },
   {
-    quote: "On a pu identifier une faiblesse critique dans l'API de notre principal concurrent en moins d'une semaine. Cette information valait de l'or. C'est de la CI technique, pas du marketing.",
+    quote: "On a pu identifier une faiblesse critique dans la logistique de notre concurrent en moins d'une semaine. Cette information valait de l'or. C'est de l'intelligence concurrentielle, pas du marketing.",
     name: "Alexandre Martin",
-    title: "Lead Developer @ API-First Company",
+    title: "Responsable Opérations @ E-commerce",
   }
 ];
 
@@ -31,19 +31,19 @@ const Testimonials: React.FC = () => {
   const isVisible = useOnScreen(sectionRef);
 
   return (
-    <section id="temoignages" className="py-20 bg-brand-dark">
+    <section id="temoignages" className="py-20 bg-brand-gray">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <AnimatedTitle text="Ils nous font confiance." className="text-3xl md:text-4xl font-bold text-white font-mono" />
           <p className="mt-4 text-lg text-brand-light-gray max-w-3xl mx-auto">
-            Des leaders techniques et produit utilisent nos données pour construire de meilleurs logiciels, plus rapidement.
+            Des leaders de tous secteurs utilisent nos données pour construire de meilleures entreprises, plus rapidement.
           </p>
         </div>
         <div ref={sectionRef} className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
-              className={`bg-brand-gray p-8 rounded-lg border border-brand-border flex flex-col fade-in ${isVisible ? 'visible' : ''}`}
+              className={`bg-brand-dark p-8 rounded-lg border border-brand-border flex flex-col fade-in ${isVisible ? 'visible' : ''}`}
               style={{ transitionDelay: `${isVisible ? index * 150 + 200 : 0}ms` }}
             >
               <p className="text-brand-light-gray mb-6 flex-grow">"{testimonial.quote}"</p>

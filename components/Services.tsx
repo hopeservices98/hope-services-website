@@ -5,46 +5,46 @@ import { AnimatedTitle } from './AnimatedTitle.tsx';
 
 const plans = [
   {
-    name: "CORE API",
+    name: "ESSENTIEL",
     price: "250€",
     period: "/ mois",
     subtext: "Idéal pour démarrer",
-    description: "Pour les équipes souhaitant intégrer les données dans leurs propres systèmes.",
+    description: "Pour les entreprises qui veulent commencer à exploiter les données du web.",
     features: [
-      "Accès complet à l'API REST/GraphQL",
+      "Accès complet à notre API de données",
       "Surveillance jusqu'à 5 sources",
       "Dashboard de visualisation",
       "Support par email",
     ],
-    cta: "Commencer avec l'API",
+    cta: "Commencer",
     popular: false,
   },
   {
-    name: "TEAM INTEGRATION",
+    name: "ÉQUIPE PRO",
     price: "750€",
     period: "/ mois",
     subtext: "À partir de",
-    description: "Pour les équipes produit et dev qui veulent maximiser leur efficacité.",
+    description: "Pour les équipes qui veulent maximiser leur efficacité et leur réactivité.",
     features: [
-      "Tous les avantages de CORE API",
-      "Intégrations natives (Jira, Slack, Linear)",
-      '"Backlog-as-a-Service" automatisé',
+      "Tous les avantages de ESSENTIEL",
+      "Intégrations à vos outils (Slack, Trello...)",
+      "Rapports d'analyse automatisés",
       "Surveillance jusqu'à 20 sources",
       "Support prioritaire",
     ],
-    cta: "Choisir Team",
+    cta: "Choisir Équipe Pro",
     popular: true,
   },
   {
-    name: "STRATEGIC DATA",
+    name: "STRATÉGIQUE",
     price: "Sur Devis",
     period: "",
     subtext: "Généralement à partir de 2,500€ / mois",
-    description: "Pour les organisations data-driven qui veulent un avantage stratégique.",
+    description: "Pour les entreprises qui veulent un avantage concurrentiel décisif.",
     features: [
-      "Tous les avantages de TEAM INTEGRATION",
-      "API de Benchmarking en Temps Réel",
-      "Accès aux modèles prédictifs d'impact",
+      "Tous les avantages de ÉQUIPE PRO",
+      "Tableaux de bord concurrentiels en temps réel",
+      "Accès à nos modèles prédictifs",
       "Sources illimitées",
       "Accompagnement et support dédiés",
     ],
@@ -70,9 +70,9 @@ const Services: React.FC = () => {
         <div 
           className="text-center mb-12"
         >
-          <AnimatedTitle text="Des Offres Conçues pour les Équipes Techniques" className="text-3xl md:text-4xl font-bold text-white font-mono" />
+          <AnimatedTitle text="Des Offres Conçues pour la Croissance" className="text-3xl md:text-4xl font-bold text-white font-mono" />
           <p className="mt-4 text-lg text-brand-light-gray max-w-3xl mx-auto">
-            Choisissez le plan qui s'adapte à la maturité de votre stack et de vos processus.
+            Choisissez le plan qui s'adapte à la maturité de votre entreprise et de vos processus.
           </p>
         </div>
         <div ref={sectionRef} className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">

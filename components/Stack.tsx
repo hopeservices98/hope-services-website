@@ -9,8 +9,8 @@ import { AnimatedTitle } from './AnimatedTitle.tsx';
 const stackItems = [
     {
         icon: <DatabaseIcon className="w-8 h-8 mb-4 text-brand-primary" />,
-        title: "Définition des Sources & Schémas",
-        description: "Nous définissons avec vous les entités à surveiller (produits, concurrents) et le schéma de données de sortie JSON.",
+        title: "Définition des Sources & Formats",
+        description: "Nous définissons avec vous les entités à surveiller (marques, concurrents) et le format des données dont vous avez besoin.",
     },
     {
         icon: <CloudIcon className="w-8 h-8 mb-4 text-brand-primary" />,
@@ -19,13 +19,13 @@ const stackItems = [
     },
     {
         icon: <CogIcon className="w-8 h-8 mb-4 text-brand-primary" />,
-        title: "Pipeline de Traitement & d'Enrichissement (ETL)",
-        description: "La donnée brute est nettoyée, normalisée, et classifiée (Bug, Feature Request) via notre pipeline de traitement NLP.",
+        title: "Pipeline de Traitement & d'Enrichissement",
+        description: "La donnée brute est nettoyée, normalisée, et classifiée (Problème, Opportunité) via notre pipeline de traitement.",
     },
     {
         icon: <ApiIcon className="w-8 h-8 mb-4 text-brand-primary" />,
-        title: "Livraison des Données via API et Intégrations",
-        description: "Consommez les données via API REST/GraphQL, recevez des alertes via webhooks (Slack) ou des tickets auto-créés (Jira, Linear).",
+        title: "Livraison des Données via API et Rapports",
+        description: "Consommez les données via notre API, recevez des alertes via webhooks (Slack) ou des rapports automatisés (Email, etc.).",
     }
 ];
 
@@ -34,12 +34,12 @@ const Stack: React.FC = () => {
     const isVisible = useOnScreen(sectionRef);
 
     return (
-        <section id="stack" className="py-20 bg-brand-gray">
+        <section id="processus" className="py-20 bg-brand-gray">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-12">
-                    <AnimatedTitle text="Notre Stack Technique & Méthodologie" className="text-3xl md:text-4xl font-bold text-white font-mono" />
+                    <AnimatedTitle text="Notre Processus & Méthodologie" className="text-3xl md:text-4xl font-bold text-white font-mono" />
                      <p className="mt-4 text-lg text-brand-light-gray max-w-3xl mx-auto">
-                        Une plateforme de data engineering robuste pour vous donner un accès programmatique à la voix de votre marché.
+                        Une plateforme de données robuste pour vous donner un accès direct à la voix de votre marché.
                     </p>
                 </div>
                 <div ref={sectionRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

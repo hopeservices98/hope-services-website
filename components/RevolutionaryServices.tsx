@@ -4,19 +4,19 @@ import { AnimatedTitle } from './AnimatedTitle.tsx';
 
 const services = [
   {
-    title: `"Backlog-as-a-Service" Pré-priorisé`,
-    description: "Recevez des tickets auto-créés et mis à jour dans Jira/Linear, pré-remplis avec description, sources, score de popularité et tag (Bug, Feature). Le PM n'a plus qu'à affiner et assigner.",
-    revolutionary: "Vous automatisez la collecte et la qualification des besoins, la partie la plus chronophage de la gestion de produit."
+    title: `"Rapports d'Opportunités" Clé en Main`,
+    description: "Recevez des rapports d'analyse directement dans vos outils, avec les problèmes clients et les opportunités de marché déjà identifiés et quantifiés. Votre équipe n'a plus qu'à agir.",
+    revolutionary: "Vous automatisez la collecte et la qualification des besoins, la partie la plus chronophage de la veille stratégique."
   },
   {
-    title: "API de Benchmarking Technique en Temps Réel",
-    description: `Accédez à des endpoints d'API pour comparer des produits. Ex: GET /benchmark?products=A,B&metric=bug_reports. Construisez des dashboards internes qui suivent la "santé technique perçue" de vos concurrents.`,
-    revolutionary: `Nous offrons de la "Competitive Intelligence" en tant que service purement technique, quantifiable et intégrable.`
+    title: "Veille Concurrentielle Continue",
+    description: `Suivez en temps réel les forces et faiblesses de vos concurrents sur des critères clés (satisfaction client, problèmes de service, etc.) via nos tableaux de bord interactifs.`,
+    revolutionary: `Nous offrons de l'intelligence concurrentielle en tant que service, actionnable et toujours à jour.`
   },
   {
-    title: "Moteur de Prédiction d'Impact de Roadmap",
-    description: `Utilisez nos modèles prédictifs pour simuler votre roadmap. "Quel sera l'impact sur le sentiment global si nous développons les features A et B ?". Le modèle se base sur le "poids" et le sentiment des demandes passées.`,
-    revolutionary: `Passez de l'analyse descriptive (ce qui s'est passé) à l'analyse prédictive (ce qui se passera), un outil d'aide à la décision pour CTOs et CPOs.`
+    title: "Moteur de Simulation Stratégique",
+    description: `Utilisez nos modèles prédictifs pour simuler vos initiatives stratégiques. "Quel sera l'impact sur la satisfaction client si nous lançons le service A et améliorons le processus B ?".`,
+    revolutionary: `Passez de l'analyse descriptive (ce qui s'est passé) à l'analyse prédictive (ce qui se passera), un outil d'aide à la décision pour les dirigeants.`
   }
 ]
 
