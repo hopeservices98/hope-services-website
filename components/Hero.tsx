@@ -1,20 +1,7 @@
 import React, { useRef } from 'react';
 import MatrixBackground from './MatrixBackground.tsx';
 import { useOnScreen } from '../hooks/useOnScreen.ts';
-import { useMatrixText } from '../hooks/useMatrixText.ts';
-
-const AnimatedTitle: React.FC<{ text: string; as?: 'h1' | 'h2'; className?: string; }> = ({ text, as = 'h1', className }) => {
-  const ref = useRef<HTMLHeadingElement>(null);
-  const isVisible = useOnScreen(ref);
-  const animatedText = useMatrixText(text, isVisible, 30);
-  const Tag = as;
-
-  return (
-    <Tag ref={ref} className={className}>
-      {animatedText || <span className="opacity-0">{text}</span>}
-    </Tag>
-  );
-};
+import { AnimatedTitle } from './AnimatedTitle.tsx';
 
 const Hero: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);

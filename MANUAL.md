@@ -4,14 +4,14 @@
 
 Ce projet est configuré pour fonctionner directement dans le navigateur sans étape de "compilation" (sans outils comme Vite ou Webpack). Cette simplicité a une conséquence majeure sur la manière dont vous devez le modifier.
 
-**Le Principe Clé : Tout le code de l'application se trouve dans `index.tsx`**
+**Le Principe Clé : Toute l'application se trouve dans `index.html`**
 
--   **Un Seul Fichier Actif** : Le seul fichier que votre navigateur exécute est `index.tsx`. C'est là que tous les composants (Header, Hero, etc.) et la logique de l'application sont définis.
--   **Les Autres Fichiers sont Inactifs** : Les dossiers comme `components/`, `hooks/` et le fichier `App.tsx` sont présents pour vous aider à voir le code de manière organisée, mais **ils ne sont pas utilisés par le site en ligne**. Le navigateur ne peut pas lire les `import` entre ces fichiers dans cette configuration.
+-   **Un Seul Fichier Actif** : Le seul fichier que votre navigateur exécute est `index.html`. C'est là que tous les composants (Header, Hero, etc.) et la logique de l'application sont définis et consolidés.
+-   **Les Autres Fichiers sont Inactifs** : Les dossiers comme `components/`, `hooks/` et les fichiers `App.tsx` ou `index.tsx` sont des artefacts d'une structure de développement plus complexe. Dans la configuration actuelle, **ils ne sont pas utilisés par le site en ligne**. Le navigateur ne peut pas lire les `import` entre ces fichiers.
 
-**Conclusion : Pour toute modification, vous devez éditer `index.tsx` directement.**
+**Conclusion : Pour toute modification, vous devez éditer `index.html` directement.**
 
-Si vous modifiez un fichier dans `components/`, **vous ne verrez aucun changement sur le site**. Vous devez reporter cette modification sur la définition du composant correspondant à l'intérieur de `index.tsx`.
+Si vous modifiez un fichier dans `components/`, **vous ne verrez aucun changement sur le site**. Vous devez reporter cette modification sur la définition du composant correspondant à l'intérieur du grand bloc `<script type="text/babel">` dans `index.html`.
 
 ---
 
@@ -41,7 +41,7 @@ L'élément le plus important à configurer pour que le site soit fonctionnel es
     *   **Durée** : 45 minutes
 4.  **Copiez le lien** : Une fois l'événement créé, Calendly vous donnera un lien public. Il ressemblera à `https://calendly.com/votre-nom/demo-technique`.
 5.  **Mettez à jour le code** :
-    *   Ouvrez le fichier : `index.tsx` (rappelez-vous, c'est le seul fichier actif).
+    *   Ouvrez le fichier : `index.html` (rappelez-vous, c'est le seul fichier actif).
     *   Trouvez la définition du composant `Scheduling`.
     *   Localisez la ligne :
         ```javascript
@@ -53,7 +53,7 @@ Le site est maintenant prêt à prendre des rendez-vous pour vous !
 
 ### 1.3. Personnalisation du Contenu
 
-Tout le contenu textuel (titres, descriptions, fonctionnalités) se trouve directement dans les définitions des composants à l'intérieur du fichier `index.tsx`. Si vous souhaitez modifier un texte, il vous suffit de trouver le composant correspondant dans `index.tsx` et de changer le texte.
+Tout le contenu textuel (titres, descriptions, fonctionnalités) se trouve directement dans les définitions des composants à l'intérieur du fichier `index.html`. Si vous souhaitez modifier un texte, il vous suffit de trouver le composant correspondant dans `index.html` et de changer le texte.
 
 - **Titre principal** : Dans le composant `Hero`.
 - **Plans et tarifs** : Dans le composant `Services`.
